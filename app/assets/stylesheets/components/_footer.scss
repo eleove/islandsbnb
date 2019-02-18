@@ -1,0 +1,34 @@
+#footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #F7F7F7;
+}
+
+.container {
+  text-align: center;
+  size: 30px;
+  background-color: rgba(239, 88, 109, 0.7);
+}
+
+#copy {
+  background-color: rgba(239, 88, 109, 0.9);
+}
+
+body {
+  .container {
+    font-size: 10px;
+    width: auto;
+    max-width: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #F7F7F7;
+}
+
+a:hover {
+  color: #C2516C;
+}
