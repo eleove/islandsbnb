@@ -1,2 +1,9 @@
 <h1>Islands#index</h1>
 <p>Find me in app/views/islands/index.html.erb</p>
+
+
+<!-- app/views/restaurants/index.html.erb -->
+<% @islands.each do |island| %>
+  <h2><%= island.title %></h2>
+  <p><%= island.description %></p>
+<% end %>
