@@ -1,7 +1,8 @@
 class IslandsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
+
   def index
     @islands = Island.all
-
   end
 
   def new
@@ -10,13 +11,16 @@ class IslandsController < ApplicationController
 
   def create
     @island = Island.new(island_params)
+    @island.user = current_user
     if @island.save
-      redirect_to islands_index_path, notice: 'Success'
+      redirect_to islands_path, notice: 'Success'
     else
       render :new
     end
-    @island.user = current_user
-    @island.save
+  end
+
+  def show
+    @island = Island.find(params[:id])
   end
 
   private
