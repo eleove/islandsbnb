@@ -8,7 +8,6 @@
 .container {
   text-align: center;
   size: 30px;
-  background-color: rgba(239, 88, 109, 0.7);
 }
 
 #copy {
@@ -29,4 +28,8 @@ body {
 
 a:hover {
   color: #C2516C;
+}
+
+#footer .container {
+  background-color: rgba(239, 88, 109, 0.7);
 }
