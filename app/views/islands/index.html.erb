@@ -1,21 +1,25 @@
 <h1>Your choice</h1>
 <p></p>
 
-<div class="container">
+<div class="container" >
+  <div class="row">
 
-  <% @islands.each do |island| %>
-  <div class="card-trip col-md-4">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
-    <div class="card-trip-infos">
-      <div>
-        <h2><%= island.title %></h2>
-        <p><%= island.description %></p>
+    <% @islands.each do |island| %>
+      <div class="col-md-4">
+        <div class="card-trip">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= island.title %></h2>
+              <p><%= island.description %></p>
+            </div>
+            <h2 class="card-trip-pricing"><%= island.price_per_night %>$</h2>
+            <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+          </div>
+        </div>
       </div>
-      <h2 class="card-trip-pricing"><%= island.price_per_night %>$</h2>
-      <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
-    </div>
-  </div>
-<% end %>
+    <% end %>
 
+  </div>
 </div>
 
