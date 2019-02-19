@@ -8,11 +8,13 @@
   <div class="navbar-wagon-right hidden-xs hidden-sm" id="navbar">
     <div class="navbar-wagon-item navbar-wagon-link"><%= link_to 'Accueil', root_path %></div>
 
-    <div class="navbar-wagon-item navbar-wagon-link"><%= link_to 'Voir toutes les îles', islands_index_path %></div>
+    <div class="navbar-wagon-item navbar-wagon-link"><%= link_to 'Voir toutes les îles', islands_path %></div>
 
-    <div class="navbar-wagon-item navbar-wagon-link"><%= link_to 'Créer une île', islands_new_path %></div>
+    <div class="navbar-wagon-item navbar-wagon-link"><%= link_to 'Créer une île', new_island_path %></div>
 
     <div class="navbar-wagon-item navbar-wagon-link"><%= link_to 'Connexion', new_user_session_path %></div>
+
+    <div class="navbar-wagon-item navbar-wagon-link"><%= link_to 'Deconnexion', destroy_user_session_path, method: :delete %></div>
   </div>
 
   <!-- Dropdown appearing on mobile only -->
