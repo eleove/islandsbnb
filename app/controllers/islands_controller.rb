@@ -9,11 +9,12 @@ class IslandsController < ApplicationController
   def create
     @island = Island.new(island_params)
     if @island.save
-      redirect_to @restaurant, notice: 'Success'
+      redirect_to islands_index_path, notice: 'Success'
     else
       render :new
     end
     @island.user = current_user
+    @island.save
   end
 
   private
