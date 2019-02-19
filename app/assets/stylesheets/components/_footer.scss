@@ -1,9 +1,8 @@
 #footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   color: #F7F7F7;
+  padding-top: 50px;
+  align-self: flex-end;
+  text-align: center;
 }
 
 .container {
@@ -14,6 +13,10 @@
 
 #copy {
   background-color: rgba(239, 88, 109, 0.9);
+  a {
+  text-decoration: none;
+  color: #F7F7F7;
+}
 }
 
 body {
@@ -22,11 +25,6 @@ body {
     width: auto;
     max-width: none;
   }
-}
-
-a {
-  text-decoration: none;
-  color: #F7F7F7;
 }
 
 a:hover {
