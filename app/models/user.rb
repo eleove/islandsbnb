@@ -6,4 +6,9 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :islands, through: :bookings
   validates :email, presence: true, uniqueness: true
+
+  # par défaut simple form appelle to_s
+  def to_s
+    email
+  end
 end

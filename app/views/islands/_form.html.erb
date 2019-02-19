@@ -1,0 +1,11 @@
+<%= simple_form_for @island do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :price_per_night %>
+  <%= f.input :user_id %>
+  <%= f.association :user %>
+
+  <%= f.submit "Créer", class: "btn btn-primary" %>
+<% end %>
+
+
