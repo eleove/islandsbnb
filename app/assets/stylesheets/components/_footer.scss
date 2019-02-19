@@ -1,9 +1,8 @@
 #footer {
   color: #F7F7F7;
-  padding-top: 50px;
 }
 
-.container {
+.footer-container {
   text-align: center;
   size: 30px;
 }
@@ -17,7 +16,7 @@
 }
 
 body {
-  .container {
+  .footer-container {
     font-size: 10px;
     width: auto;
     max-width: none;
@@ -28,6 +27,6 @@ a:hover {
   color: #C2516C;
 }
 
-#footer .container {
+#footer .footer-container {
   background-color: rgba(239, 88, 109, 0.7);
 }
