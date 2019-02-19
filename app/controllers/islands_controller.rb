@@ -21,11 +21,12 @@ class IslandsController < ApplicationController
 
   def show
     @island = Island.find(params[:id])
+    @booking = Booking.new
   end
 
   private
 
   def island_params
-    params.require(:island).permit(:title, :description, :price_per_night)
+    params.require(:island).permit(:title, :description, :price_per_night, :photo)
   end
 end
