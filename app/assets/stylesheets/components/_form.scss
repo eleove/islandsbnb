@@ -1,0 +1,65 @@
+h1 {
+  font-size: 30px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+  color: #EF485E;
+}
+
+label {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+::placeholder {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+body.background-island {
+  background-image: url(isle.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+footer {
+  background-color: white;
+}
+
+#island_photo {
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+#creerbutton {
+  margin-bottom: 70px;
+}
+
+body.background-connection {
+  background-image: url(beach7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+  height: 100%;
+}
+
+.formulaire a {
+  padding-top: 20px;
+  color: #3C7691;
+  font-size: 17px;
+}
+
+.case label {
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+.case input {
+  padding-left: 0;
+}
+
