@@ -8,7 +8,8 @@
       <div class="col-md-4">
         <div class="card-trip">
           <%= link_to "", island_path(island) %>
-          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+          <!-- <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg"> -->
+          <%= cl_image_tag island.photo %>
           <div class="card-trip-infos">
             <div>
               <h2><%= island.title %></h2>
@@ -24,4 +25,3 @@
 
   </div>
 </div>
-
