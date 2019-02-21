@@ -15,7 +15,7 @@ const initMapbox = () => {
       style: 'mapbox://styles/mapbox/streets-v10',
       // center: [115.270385511912, -8.4560181],
       center: [coordinates.long, coordinates.lat],
-      zoom: 6
+      zoom: 10
     });
   }
 };
