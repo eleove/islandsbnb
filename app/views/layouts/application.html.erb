@@ -11,8 +11,6 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/
     javascript/packs/application.js -->
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
   </head>
   <body class="<%= yield :body_class %>">
     <%= render 'shared/navbar' %>
@@ -21,7 +19,8 @@
       <%= render 'shared/flashes' %>
       <%= yield %>
     </div>
-
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
   </body>
 
 </html>
