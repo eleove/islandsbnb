@@ -10,7 +10,7 @@ class Booking < ApplicationRecord
   private
 
   def availability
-    if !available_for?(check_in, check_out)
+    unless available_for?(check_in, check_out)
       errors.add(:check_in, "déjà réservé à cette date")
       errors.add(:check_out, "déjà réservé à cette date")
     end
@@ -23,9 +23,9 @@ class Booking < ApplicationRecord
   # end
 
   def available_for?(checking_date, checkout_date)
-    Booking.where(island: island)
+    Booking.where(island: self.island)
            .where("check_in > ? OR check_out < ? ", checkout_date, checking_date)
-           .length == Booking.all.length
+           .length == Booking.where(island: self.island).length
   end
 
   def correct_range
