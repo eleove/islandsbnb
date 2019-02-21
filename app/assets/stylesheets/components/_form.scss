@@ -2,8 +2,11 @@ h1 {
   font-size: 30px;
   padding-bottom: 20px;
   padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   text-align: center;
-  color: #EF485E;
+  color: #303030;
+
 }
 
 label {
@@ -21,7 +24,7 @@ label {
 }
 
 body.background-island {
-  background-image: url(isle.jpg);
+  background-image: url(isle-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -46,6 +49,20 @@ body.background-connection {
   background-size: cover;
   padding: 0px;
   height: 100%;
+}
+
+body.background-signup {
+  background-image: url(palmier.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+body.background-password {
+  background-image: url(islandpassword.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 .formulaire a {
