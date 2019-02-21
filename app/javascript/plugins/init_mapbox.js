@@ -22,7 +22,7 @@ const initMapbox = () => {
       map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v10',
-        zoom: 1.7
+        zoom: 1.3
       });
     }
     coordinates.forEach((coordinate) => {
