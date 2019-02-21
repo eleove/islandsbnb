@@ -1,0 +1,85 @@
+#card_ile {
+  border: gray 2px solid;
+}
+
+.image_ile img {
+  background-image: cover;
+}
+
+.image_ile p {
+  text-align: center justify;
+  margin: 20px;
+}
+
+.image_ile img {
+  padding: 50px;
+
+}
+
+#cardimg {
+  background-color: #C7C7C7;
+  width: 100%;
+}
+
+.banniere {
+  img {
+    width: 100%;
+    overflow: hidden;
+    max-height: 500px;
+    object-fit: cover;
+    position: relative;
+  }
+}
+
+.banniere {
+  h1 {
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 185px;
+    right: 0;
+    left: 0;
+    font-weight: bold;
+  }
+}
+
+.paragraphe {
+  p {
+    color: rgba(0, 0, 0, 0.7);
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 5px #474747 solid;
+    margin: 60px;
+    background-color: #E5E5E5;
+  }
+  p:hover {
+    background-color: #DEDEDE;
+  }
+  h5 {
+    position: absolute;
+    top: 75px;
+    right: 10px;
+  }
+}
+
+.mapetdate {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0 5px;
+  padding-right: 0;
+  padding-left:0;
+  background-image: url(franck.png);
+  background-size: cover;
+
+  .book-dates {
+    text-align: center;
+    h2{
+      font-size: 27px;
+      padding-bottom: 5px;
+      padding-top: 0;
+    }
+  }
+}
+
+.conte {
+}

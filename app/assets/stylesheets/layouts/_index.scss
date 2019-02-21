@@ -3,6 +3,13 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
-.content {
+.content footer {
   min-height: calc(100vh - 70px - 121.6px);
 }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+            }

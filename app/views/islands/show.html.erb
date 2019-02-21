@@ -1,32 +1,47 @@
 <!-- HTML A MODIFIER @CARO  -->
 
-<h1> <%=  @island.title %> </h1>
-<h5 style="text-align: center"> owner: <%= @island.user.username %> </h5>
+
 
 <!-- <img src="https://images.unsplash.com/photo-1418823163112-6a149fc92bab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" style="width: 525px; height: 350px" alt=""> -->
 
-<%= cl_image_tag @island.photo, height: 350, width: 525, crop: :fill %>
+<div class="banniere">
+  <%= cl_image_tag @island.photo, height: 350, width: 525, crop: :fill %>
 
-
-<p> <em>  <%= @island.description %> </em> </p>
-
-<div
-  id="map"
-  style="width: 50%;
-  height: 300px;"
-  data-coordinates="<%= {long: @island.longitude, lat: @island.latitude}.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
-
-<div class='book-dates'>
-  <h2> Book a date </h2>
-
-  <%= simple_form_for [@island, @booking] do |f| %>
-    <%= f.input :check_in, label: 'Check-in', as: :date, start_year: Date.today.year, end_year: Date.today.year + 2, order: [:day, :month, :year] %>
-    <%= f.input :check_out, label: 'Check-out', as: :date, start_year: Date.today.year, end_year: Date.today.year + 2, order: [:day, :month, :year] %>
-    <%= f.button :submit, 'Book now!' %>
-  <% end %>
+  <h1> <%=  @island.title %> </h1>
 </div>
 
-<h4> Reviews </h4>
-<p> Jean <span> Super ! </span> </p>
+<div class="paragraphe">
+  <p><%= @island.description %></p>
+  <h5 style="text-align: center"> <%= @island.user.username %> </h5>
+</div>
+
+<div class="mapetdate">
+  <div class="container conte">
+    <div class="row">
+      <div class="col-md-6 ">
+        <div
+          class="mapmap" id="map"
+          style="
+          height: 300px;"
+          data-coordinates="<%= {long: @island.longitude, lat: @island.latitude}.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+        ></div>
+
+      </div>
+      <div class="col-md-6 ">
+        <div class='book-dates'>
+          <h2> Book a date </h2>
+          <%= simple_form_for [@island, @booking] do |f| %>
+            <%= f.input :check_in, label: 'Check-in', as: :date, start_year: Date.today.year, end_year: Date.today.year + 2, order: [:day, :month, :year] %>
+            <%= f.input :check_out, label: 'Check-out', as: :date, start_year: Date.today.year, end_year: Date.today.year + 2, order: [:day, :month, :year] %>
+            <%= f.button :submit, 'Book now!', class: "btn btn-block btn-success" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+
+</div>
