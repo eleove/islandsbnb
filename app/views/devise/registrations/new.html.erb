@@ -23,6 +23,7 @@ background-signup
             <%= f.input :password_confirmation,
                         required: true,
                         input_html: { autocomplete: "new-password" } %>
+            <%= f.input :avatar, label_html: { class: "btn btn-secondary" }, input_html: { style: "display: none;"}, label: "Télécharger un avatar"  %>
           </div>
 
           <div class="form-actions">

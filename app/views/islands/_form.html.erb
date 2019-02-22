@@ -1,6 +1,7 @@
 <%= simple_form_for @island do |f| %>
   <%= f.input :title, label: "Nom de l'île", placeholder: "Entrer une île..." %>
   <%= f.input :description, placeholder: "Décrivez l'île..."%>
+  <%= f.input :address, label: "Localisation", placeholder: "Rentrez l'addresse de votre île..."%>
   <%= f.input :photo, label_html: { class: "btn btn-secondary" }, input_html: { style: "display: none;"}, label: "Télécharger une photo"  %>
   <%= f.input :photo_cache, as: :hidden %>
   <%= f.input :price_per_night, label: 'Prix par nuit', placeholder: "Saisir un prix..." %>

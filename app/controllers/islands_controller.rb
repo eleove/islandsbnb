@@ -5,9 +5,10 @@ class IslandsController < ApplicationController
     @islands = Island.all
     @markers = @islands.map do |island|
       {
-        lng: island.longitude,
+        long: island.longitude,
         lat: island.latitude,
-        infoWindow: render_to_string(partial: "infowindow", locals: { island: island })
+        infoWindow: render_to_string(partial: "infowindow", locals: { island: island }),
+        image_url: helpers.asset_url('icons8-beach.png')
       }
     end
   end
@@ -34,6 +35,6 @@ class IslandsController < ApplicationController
   private
 
   def island_params
-    params.require(:island).permit(:title, :description, :price_per_night, :photo)
+    params.require(:island).permit(:title, :description, :price_per_night, :photo, :address)
   end
 end

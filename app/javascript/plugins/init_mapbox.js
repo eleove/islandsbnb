@@ -15,7 +15,7 @@ const initMapbox = () => {
       map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v10',
-        center: [coordinates[0].lng, coordinates[0].lat],
+        center: [coordinates[0].long, coordinates[0].lat],
         zoom: 6
       });
     } else {
@@ -25,11 +25,19 @@ const initMapbox = () => {
         zoom: 1.3
       });
     }
+
     coordinates.forEach((coordinate) => {
+      // const element = document.createElement('div');
+      // element.className = 'coordinate';
+      // element.style.backgroundImage = `url('${coordinate.image_url}')`;
+      // element.style.backgroundSize = 'contain';
+      // element.style.width = '25px';
+      // element.style.height = '25px';
       const popup = new mapboxgl.Popup().setHTML(coordinate.infoWindow);
-      new mapboxgl.Marker()
-        .setLngLat([coordinate.lng, coordinate.lat])
+      new mapboxgl.Marker(coordinate)
+        .setLngLat([coordinate.long, coordinate.lat])
         .setPopup(popup)
+        // .setHTML(element.infoWindow.content)
         .addTo(map);
     });
   }
