@@ -7,7 +7,7 @@
 <div class="banniere">
   <%= cl_image_tag @island.photo, height: 350, width: 525, crop: :fill %>
 
-  <h1> <%=  @island.title %> </h1>
+  <h1> <%= @island.title %> </h1>
 </div>
 
 <div class="paragraphe">
@@ -43,6 +43,23 @@
 
 </div>
 
+<h1><%= @island.title %> <small><%= @island.price_per_night %></small></h1>
+<h2>
+  <%= pluralize @island.reviews.size, "review" %>
+</h2>
+
+<div id="reviews">
+  <% if @island.reviews.blank? %>
+    Be the first to leave a review for <%= @island.title %>
+  <% else %>
+    <% @island.reviews.each do |review| %>
+      <%= render 'islands/showreview', review: review %>
+      <%= link_to "Delete", island_review_path(@island, review), method: :delete %>
+    <% end %>
+  <% end %>
+</div>
+
+<%= render 'islands/formreview', review: Review.new, island: @island %>
 
 
 </div>
