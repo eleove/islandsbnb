@@ -11,8 +11,11 @@
 </div>
 
 <div class="paragraphe">
-  <p><%= @island.description %></p>
-  <h5 style="text-align: center"> <%= @island.user.username %> </h5>
+
+  <div id="i-have-a-tooltip">
+    <h5 style="text-align: center">Owner: <%= @island.user.username %> </h5>
+    <p><%= @island.description %></p>
+</div>
 </div>
 
 
@@ -35,7 +38,7 @@
           <%= simple_form_for [@island, @booking] do |f| %>
             <%= f.input :check_in, label: 'Check-in', as: :date, start_year: Date.today.year, end_year: Date.today.year + 2, order: [:day, :month, :year] %>
             <%= f.input :check_out, label: 'Check-out', as: :date, start_year: Date.today.year, end_year: Date.today.year + 2, order: [:day, :month, :year] %>
-            <%= f.button :submit, 'Book now!', class: "btn btn-block btn-success" %>
+            <%= f.button :submit, 'Book now!', class: "btn btn-block btn-secondary" %>
           <% end %>
         </div>
       </div>
