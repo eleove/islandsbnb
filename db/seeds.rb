@@ -25,7 +25,7 @@ user3.save
 island1 = Island.create!(
   title: 'Bali (Indonesia)',
   description: 'Bali is a tropical paradise in which visitors can relax and find themselves transported to another way of life by the scents of blossoming frangipani trees and burning incense. Made famous in the West by the classic Broadway musical South Pacific, the tiny island has more than its fair share of unique cultural offerings, such as shadow puppets and intricate artwork. Temples are decorated with impressive sculptures of gods and goddesses, adding a mystical spiritual element that lends an air of magic to every traveler’s visit.',
-  price_per_night: 990,
+  price_per_night: 9900,
   user: user1,
   address: 'Ile Bali, Indonesie'
   )
@@ -36,7 +36,7 @@ island1.save
 island2 = Island.create!(
   title: 'Bermuda',
   description: 'Hundreds of thousands of people every year escape from it all on the beautiful pink sand beaches of Bermuda.',
-  price_per_night: 1450,
+  price_per_night: 10450,
   user: user2,
   address: 'Bermudes'
   )
@@ -47,7 +47,7 @@ island2.save
 island3 = Island.create!(
   title: 'Bora Bora (French Polynesia)',
   description: 'Bora Bora (whose original name in the Tahitian language means “first-born”) is a luxury traveler’s dream. With two mountains in the center of the island and a picture-perfect lagoon and barrier reef surrounding it, it’s the quintessential location for rest, relaxation and romance.',
-  price_per_night: 2500,
+  price_per_night: 8200,
   user: user3,
   address: 'Bora Bora'
   )
@@ -58,7 +58,7 @@ island3.save
 island4 = Island.create!(
   title: 'Easter Island',
   description: 'Also known as Rapa Nui, this small island located in southeastern Polynesia is home to the massive moai, 887 enigmatic statues of giant heads that earned Easter Island its designation as a UNESCO World Heritage Site.',
-  price_per_night: 1010,
+  price_per_night: 10100,
   user: user1,
   address: 'Île de Pâques, Easter Island'
   )
@@ -69,7 +69,7 @@ island4.save
 island5 = Island.create!(
   title: 'Fiji',
   description: 'Formed through volcanic activity started 150 million years ago, Fiji is an archipelago made up of over 332 islands and more than 500 islets. Despite being remote– New Zealand, the closest significant landmass, is over 1,000 miles away– Fiji’s abundant forests, minerals and fish make it one of the most developed economies in the South Pacific.',
-  price_per_night: 1255,
+  price_per_night: 12700,
   user: user2,
   address: 'Republic of Fiji'
   )
@@ -80,7 +80,7 @@ island5.save
 island6 = Island.create!(
   title: 'Maldives',
   description: 'Located in the Indian Ocean near India’s Lakshadweep islands, the Republic of Maldives is a group of 26 ring-like coral islands encircling clear blue lagoons. It’s also one of the least populated nations on this list, with around 328,000 people living on 200 of its 1,192 islands.',
-  price_per_night: 4000,
+  price_per_night: 14320,
   user: user3,
   address: 'Maldives'
   )
