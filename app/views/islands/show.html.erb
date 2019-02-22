@@ -27,7 +27,8 @@
           class="mapmap" id="map"
           style="
           height: 300px;"
-          data-coordinates="<%= {long: @island.longitude, lat: @island.latitude}.to_json %>"
+          data-coordinates="<%= [{long: @island.longitude, lat: @island.latitude}
+          ].to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
         ></div>
 

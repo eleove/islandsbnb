@@ -11,8 +11,16 @@ Island.destroy_all
 User.destroy_all
 
 user1 = User.create!(email: 'elonmusk@tesla.com', username: 'Elon Musk', password: '123456' )
+user1.remote_avatar_url = 'https://upload.wikimedia.org/wikipedia/commons/4/49/Elon_Musk_2015.jpg'
+user1.save
+
 user2 = User.create!(email: 'francoispinault@ppr.fr', username: 'François Pinault', password: 'iruletheworld')
+user2.remote_avatar_url = 'https://www.thefamouspeople.com/profiles/images/franois-henri-pinault-1.jpg'
+user2.save
+
 user3 = User.create!(email: 'ingridbettancourt@loreal.com', username: 'Ingrid Bettancourt', password:'jelevauxbien')
+user3.remote_avatar_url = 'http://l1visible.com/wp-content/uploads/2014/10/ingrid-bettencourt-1170x1033.jpg'
+user3.save
 
 island1 = Island.create!(
   title: 'Bali (Indonesia)',
@@ -28,7 +36,7 @@ island1.save
 island2 = Island.create!(
   title: 'Bermuda',
   description: 'Hundreds of thousands of people every year escape from it all on the beautiful pink sand beaches of Bermuda.',
-  price_per_night: 1255,
+  price_per_night: 1450,
   user: user2,
   address: 'Bermudes'
   )
@@ -72,7 +80,7 @@ island5.save
 island6 = Island.create!(
   title: 'Maldives',
   description: 'Located in the Indian Ocean near India’s Lakshadweep islands, the Republic of Maldives is a group of 26 ring-like coral islands encircling clear blue lagoons. It’s also one of the least populated nations on this list, with around 328,000 people living on 200 of its 1,192 islands.',
-  price_per_night: 2500,
+  price_per_night: 4000,
   user: user3,
   address: 'Maldives'
   )
