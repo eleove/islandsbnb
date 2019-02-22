@@ -47,23 +47,27 @@
 
 </div>
 
-<h1><%= @island.title %> <small><%= @island.price_per_night %></small></h1>
-<h2>
-  <%= pluralize @island.reviews.size, "review" %>
-</h2>
-
-<div id="reviews">
-  <% if @island.reviews.blank? %>
-    Be the first to leave a review for <%= @island.title %>
-  <% else %>
-    <% @island.reviews.each do |review| %>
-      <%= render 'islands/showreview', review: review %>
-      <%= link_to "Delete", island_review_path(@island, review), method: :delete %>
-    <% end %>
-  <% end %>
+<div class="islandprice">
+  <h1><%= @island.title %></h1> <h2><small>Price per night : <%= @island.price_per_night %> $</small></h2>
 </div>
 
-<%= render 'islands/formreview', review: Review.new, island: @island %>
+<div class="reviewclass">
+  <h2>
+    <%= pluralize @island.reviews.size, "review" %>
+  </h2>
+  <div id="reviews">
+    <% if @island.reviews.blank? %>
+      Be the first to leave a review for <%= @island.title %>
+    <% else %>
+      <% @island.reviews.each do |review| %>
+        <%= render 'islands/showreview', review: review %>
+        <%= link_to "Delete", island_review_path(@island, review), method: :delete %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <%= render 'islands/formreview', review: Review.new, island: @island %>
 
 
+  </div>
 </div>
